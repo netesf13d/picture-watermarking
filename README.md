@@ -8,6 +8,26 @@ This small module contains functions useful for watermarking picture with custom
 
 ## Usage
 
+Setup the Python environment to run the example.
+- With `pip`,
+  ```bash
+  pip install -r requirements.txt
+  ```
+- Using `conda`,
+  ```bash
+  conda create --name <env_name> --file requirements.txt
+  conda activate <env_name>
+  ```
+- Using `uv`,
+  ```bash
+  uv venv .venv
+  source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+  uv pip install -r requirements.txt
+  ```
+
+
+## Example
+
 After picture loading and conversion to a numpy array `im`, obtain the picture `size` and `dpi`.
 <p align="center">
     <img src="https://github.com/netesf13d/picture-watermarking/blob/main/example/Hopper_Navy-Portrait.jpg" width="300" />
@@ -57,11 +77,3 @@ img = mask_over(img, mask)
 <p align="center">
     <img src="https://github.com/netesf13d/picture-watermarking/blob/main/example/yellow dots.png" width="500" />
 </p>
-
-
-## Dependencies
-
-- [numpy](https://numpy.org/)
-- [matplotlib](https://matplotlib.org/)
-- [python-pillow](https://python-pillow.org/) (for loading/saving pictures)
-
